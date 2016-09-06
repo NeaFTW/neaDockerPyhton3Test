@@ -11,7 +11,7 @@ import json
 def hello():
     return "This is a server for DeVops"
 
-@app.route("/v1/" + os.environ['GROUPNAME'])
+@app.route("/v1/GROUPNAME")
 def toto():
     jsonresult = {}
     jsonresult["result"] = "success"
