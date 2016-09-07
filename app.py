@@ -1,4 +1,4 @@
-#!/Library/Frameworks/Python.framework/Versions/3.5/bin/python3
+#! /usr/bin/env python3.5
 
 import flask
 from flask import Flask
@@ -11,7 +11,7 @@ import json
 def hello():
     return "This is a server for DeVops"
 
-@app.route("/v1/GROUPNAME")
+@app.route("/v1/groupname")
 def toto():
     jsonresult = {}
     jsonresult["result"] = "success"
