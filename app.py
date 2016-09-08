@@ -16,9 +16,10 @@ def toto():
     jsonresult = {}
     jsonresult["result"] = "success"
     jsonresult["data"] = os.environ['GROUPNAME']
+    #jsonresult["data"] = os.getenv('GROUPNAME', "Strontium")
 
     print(jsonresult)
     return flask.jsonify(jsonresult)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=80)
