@@ -14,9 +14,11 @@ def hello():
 @app.route("/v1/groupname")
 def toto():
     jsonresult = {}
+    jsonresult["data"] = {}
+    jsonresult["data"]["groupname"] = os.environ['GROUPNAME']
     jsonresult["result"] = "success"
-    jsonresult["data"] = os.environ['GROUPNAME']
-    #jsonresult["data"] = os.getenv('GROUPNAME', "Strontium")
+    #jsonresult["data"]["groupname"] = os.getenv('GROUPNAME', "Strontium")
+
 
     print(jsonresult)
     return flask.jsonify(jsonresult)
