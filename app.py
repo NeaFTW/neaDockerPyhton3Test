@@ -16,7 +16,7 @@ def toto():
     jsonresult = {}
     jsonresult["data"] = {}
     jsonresult["data"]["groupname"] = os.environ['GROUPNAME']
-    jsonresult["result"] = "success"
+    jsonresult["status"] = "success"
     #jsonresult["data"]["groupname"] = os.getenv('GROUPNAME', "Strontium")
 
 
